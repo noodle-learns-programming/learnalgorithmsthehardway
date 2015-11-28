@@ -14,7 +14,7 @@ def count_rectange_with_size(size):
 
 
 for size in range(1, 9):
-    print 'With size %s is %s: ', (size, count_rectange_with_size(size))
+    print 'With size %s is %s.' % (size, count_rectange_with_size(size))
     total += count_rectange_with_size(size)
 
 print 'Number of rectangle in a square 8x8 are: ', total
