@@ -1,12 +1,10 @@
 def get_max_number_in_array(arrNumber):
-    #Get the size of array
-    length = len(arrNumber)
     maxValue = arrNumber[0]
     #Loop to find max value
-    for i in range(0, length):
+    for val in arrNumber:
         #Compare value to find newest value
-        if maxValue < arrNumber[i]:
-            maxValue = arrNumber[i]
+        if maxValue < val:
+            maxValue = val
 
     return maxValue
         
