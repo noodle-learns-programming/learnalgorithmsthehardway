@@ -39,11 +39,28 @@ class Tree:
         print node.v
         self._printTree(node.l)
         self._printTree(node.r)
+    def find(self, val):
+        root = self.getRoot()
+        if root is None:
+            return None
+        return self._find(root, val)
+
+    def _find(self, node, val):
+        if val == node.v:
+            return node
+        if val < node.v and node.l != None:
+            return self._find(node.l, val)
+        elif node.r != None:
+            return self._find(node.r, val)
+        return None
+
+
 
 tree = Tree()
-tree.add(1)
 tree.add(2)
+tree.add(1)
 tree.add(3)
-
 tree.printTree()
+print '--------------------------------------------'
+print tree.find(3)
         
